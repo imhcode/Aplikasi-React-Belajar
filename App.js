@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {Text, View, Image, TextInput} from 'react-native';
+import { getAutomaticTypeDirectiveNames } from 'typescript';
+
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
       <Text>Sudjono</Text>
       <Photo/>
       <TextInput style={{borderWidth:1}}></TextInput>
+      <BoxGreen/>
+      <Profile/>
     </View>
     );
 };
@@ -31,6 +35,28 @@ const Photo = () => {
   style={{height:80, width:80 }}
   
   ></Image>
+}
+
+class BoxGreen extends Component{
+  render(){
+    return <Text>Ini BOX GREEN</Text>
+  }
+}
+
+class Profile extends Component{
+  render(){
+    return(
+    <View 
+      style={{ padding:10, backgroundColor:'#ddd'}}
+    >
+      <Image
+      source={{uri:'https://placeimg.com/100/100/people'}}
+      style={{width: 100, height: 100, borderRadius:50, borderWidth:2}}
+      />
+      <Text>Ini Profile aku</Text>
+    </View>
+    ) 
+  }
 }
 
 export default App;
