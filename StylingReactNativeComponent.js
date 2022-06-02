@@ -27,7 +27,8 @@ const StylingReactNativeComponent = () =>{
             backgroundColor:'#6fcf97',
             paddingVertical:6,
             borderRadius:25,
-            marginTop:20
+            marginTop:20,
+            marginTop:20,
           }}>
             <Text
               style={{
